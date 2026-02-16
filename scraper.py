@@ -10,7 +10,10 @@ import time
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.StreamHandler(sys.stdout)]
+    handlers=[
+        logging.FileHandler("mapping_log.log"),   #  writes to file
+        logging.StreamHandler(sys.stdout)         #  prints to console
+    ]
 )
 
 def map_data(raw_file, reference_file, lookup_column, output_file):

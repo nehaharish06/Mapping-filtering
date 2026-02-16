@@ -12,3 +12,11 @@
 2026-02-14 15:48:58,143 - INFO - Process completed successfully
 2026-02-14 15:48:58,145 - INFO - Execution Time: 0:00:01.064820
 2026-02-14 15:48:58,146 - INFO - Output saved to mapped_output.csv
+2026-02-16 20:48:14,919 - INFO - ===== Data Mapping Process Started =====
+2026-02-16 20:48:14,924 - INFO - Total Raw Records: 100
+2026-02-16 20:48:14,925 - INFO - Unique Lookup Values: 100
+2026-02-16 20:48:14,925 - INFO - Duplicate Values Removed: 0
+2026-02-16 20:48:15,200 - INFO - Matched Rows: 100
+2026-02-16 20:48:15,201 - INFO - Unmatched Values: 0
+2026-02-16 20:48:15,201 - INFO - Execution Time: 0.28 seconds
+2026-02-16 20:48:15,201 - INFO - ===== Data Mapping Process Completed Successfully =====
