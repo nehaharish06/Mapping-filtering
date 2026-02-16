@@ -1,0 +1,14 @@
+2026-02-14 15:48:17,916 - INFO - Process started
+2026-02-14 15:48:17,917 - INFO - Loading raw data...
+2026-02-14 15:48:17,918 - ERROR - File not found: [Errno 2] No such file or directory: '/mnt/data/raw_data.csv'
+2026-02-14 15:48:57,079 - INFO - Process started
+2026-02-14 15:48:57,080 - INFO - Loading raw data...
+2026-02-14 15:48:57,427 - INFO - Raw data rows: 100
+2026-02-14 15:48:57,435 - INFO - Unique lookup keys: 100
+2026-02-14 15:48:57,435 - INFO - Loading reference data...
+2026-02-14 15:48:58,127 - INFO - Reference data rows: 150
+2026-02-14 15:48:58,127 - INFO - Filtering matching records...
+2026-02-14 15:48:58,134 - INFO - Matched rows found: 100
+2026-02-14 15:48:58,143 - INFO - Process completed successfully
+2026-02-14 15:48:58,145 - INFO - Execution Time: 0:00:01.064820
+2026-02-14 15:48:58,146 - INFO - Output saved to mapped_output.csv
