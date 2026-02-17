@@ -4,9 +4,9 @@ import sys
 import os
 import time
 
-# =====================================
+
 # LOGGING CONFIGURATION
-# =====================================
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -21,9 +21,9 @@ def map_data(raw_file, reference_file, lookup_column, output_file):
         start_time = time.time()
         logging.info("===== Data Mapping Process Started =====")
 
-        # =====================================
+        
         # VALIDATION CHECKS
-        # =====================================
+        
         if not os.path.exists(raw_file):
             raise FileNotFoundError(f"{raw_file} not found.")
         if not os.path.exists(reference_file):
@@ -54,9 +54,9 @@ def map_data(raw_file, reference_file, lookup_column, output_file):
         if lookup_column not in reference_df.columns:
             raise KeyError(f"{lookup_column} not found in reference file.")
 
-        # =====================================
+
         # FILTER MATCHING RECORDS
-        # =====================================
+        
         mapped_df = reference_df[
             reference_df[lookup_column].isin(unique_keys)
         ]
@@ -64,16 +64,16 @@ def map_data(raw_file, reference_file, lookup_column, output_file):
         # Save mapped output
         mapped_df.to_csv(output_file, index=False)
 
-        # =====================================
+        
         # UNMATCHED RECORDS
-        # =====================================
+        
         unmatched_values = set(unique_keys) - set(reference_df[lookup_column])
         unmatched_df = pd.DataFrame(unmatched_values, columns=[lookup_column])
         unmatched_df.to_csv("unmatched_records.csv", index=False)
 
-        # =====================================
+        
         # SUMMARY REPORT
-        # =====================================
+
         summary_data = {
             "Total Raw Records": total_raw_records,
             "Unique Lookup Values": len(unique_keys),
@@ -86,9 +86,9 @@ def map_data(raw_file, reference_file, lookup_column, output_file):
         summary_df = pd.DataFrame([summary_data])
         summary_df.to_csv("mapping_summary.csv", index=False)
 
-        # =====================================
+        
         # PERFORMANCE METRICS
-        # =====================================
+        
         end_time = time.time()
         execution_time = round(end_time - start_time, 2)
 
@@ -100,9 +100,9 @@ def map_data(raw_file, reference_file, lookup_column, output_file):
     except Exception as e:
         logging.error(f"Error occurred: {e}")
 
-# =====================================
+
 # RUN SCRIPT
-# =====================================
+
 if __name__ == "__main__":
     map_data(
         raw_file="raw_data.csv",
